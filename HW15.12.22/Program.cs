@@ -4,8 +4,8 @@ Console.Write("Введите число 2: ");
 int b = int.Parse(Console.ReadLine()!);
 Console.Clear();
 if (a > b){
-    Console.WriteLine($"Максимальное число: {a}");
+    Console.WriteLine($"Большее число: {a}, Меньшее число {b}");
 }
 else {
-    Console.WriteLine($"Максимальное число: {b}");
+    Console.WriteLine($"Большее число: {b}, Меньшее число {a}");
 }
