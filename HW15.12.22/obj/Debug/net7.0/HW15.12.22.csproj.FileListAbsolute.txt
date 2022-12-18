@@ -1,0 +1,15 @@
+C:\Обучение\HomeWork\HW15.12.22\bin\Debug\net7.0\HW15.12.22.exe
+C:\Обучение\HomeWork\HW15.12.22\bin\Debug\net7.0\HW15.12.22.deps.json
+C:\Обучение\HomeWork\HW15.12.22\bin\Debug\net7.0\HW15.12.22.runtimeconfig.json
+C:\Обучение\HomeWork\HW15.12.22\bin\Debug\net7.0\HW15.12.22.dll
+C:\Обучение\HomeWork\HW15.12.22\bin\Debug\net7.0\HW15.12.22.pdb
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.csproj.AssemblyReference.cache
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.AssemblyInfoInputs.cache
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.AssemblyInfo.cs
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.csproj.CoreCompileInputs.cache
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.dll
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\refint\HW15.12.22.dll
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.pdb
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\HW15.12.22.genruntimeconfig.cache
+C:\Обучение\HomeWork\HW15.12.22\obj\Debug\net7.0\ref\HW15.12.22.dll
