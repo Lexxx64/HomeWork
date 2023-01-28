@@ -1,25 +1,7 @@
-﻿// int[,] array = GetArray(3, 4, 0, 100);
-// PrintArray(array);
+﻿ //int[,] array = GetArray(3, 4, 0, 100);
+ //PrintArray(array);
 
-// //----метод создания двухмерного массива
-// int[,] GetArray (int m, int n, int minValue, int maxValue){
-//     int [,] massive = new int[m,n];
-//     for(int i = 0; i < m; i++){
-//         for(int j = 0; j < n; j++){
-//              massive[i, j] = new Random().Next(minValue, maxValue + 1);
-//         }
-//     } return massive;
-// }
 
-// //----метод вывода массива
-// void PrintArray(int[,] array){
-//     for(int i = 0; i < array.GetLength(0); i++){
-//         for(int j = 0; j < array.GetLength(1); j++){
-//             Console.Write($"{array[i, j]} ");
-//         }
-//         Console.WriteLine();
-//     } 
-// }
 //--Задача 47. Задайте двумерный массив размером m×n
 //заполненный случайными вещественными числами.
 // double[,] array = GetDoubleArray(3, 4);
@@ -50,11 +32,18 @@ void PrintDoubleArray(double[,] array){
 // или же указание, что такого элемента нет
 
 
-int[,] array = GetArray(4, 3, 10, 18);
-Console.WriteLine("Введите число маркер ");
-int num = int.Parse(Console.ReadLine()!);
+//int[,] array = GetArray(4, 3, 10, 18);
+//Console.WriteLine("Введите число маркер ");
+//int num = int.Parse(Console.ReadLine()!);
+//PrintArray(array);
+//GetNum(array, num);
+
+//Задача 52. Задайте двумерный массив целых чиселю 
+//Найдите среднеарифметическое в каждом столбце
+
+int[,] array = GetArray(3, 3, 0, 10);
 PrintArray(array);
-GetNum(array, num);
+GetSumColumns(array);
 
 //---Метод создания целочисленного массива---
 int[,] GetArray(int m, int n, int minValue, int maxValue){
@@ -89,4 +78,17 @@ bool GetNum(int[,] array, int num){
    }
    Console.WriteLine($"Маркер {num} отсутствует в массиве");
    return false;  
+}
+
+//---Метод подсчета столбцов---
+void GetSumColumns(int[,] array){
+    for (int j = 0; j < array.GetLength(1); j++){
+        int sum = 0;
+        double med = 0;
+        for (int i = 0; i < array.GetLength(0); i++){
+            sum += array[i,j];
+        }
+    }
+    med = Math.Round(sum / 3, 2);
+    Console.WriteLine($"{med}");
 }
