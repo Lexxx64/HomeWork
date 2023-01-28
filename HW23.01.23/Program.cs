@@ -51,8 +51,10 @@ void PrintDoubleArray(double[,] array){
 
 
 int[,] array = GetArray(4, 3, 10, 18);
+Console.WriteLine("Введите число маркер ");
+int num = int.Parse(Console.ReadLine()!);
 PrintArray(array);
-GetNum(array);
+GetNum(array, num);
 
 //---Метод создания целочисленного массива---
 int[,] GetArray(int m, int n, int minValue, int maxValue){
@@ -76,17 +78,15 @@ void PrintArray(int[,] array){
 }
 
 //--- Метод поиск числа---
-bool GetNum(int[,] array){
-    Console.WriteLine("Введите число маркер ");
-    int num = int.Parse(Console.ReadLine()!);
+bool GetNum(int[,] array, int num){
    for(int i = 0; i < array.GetLength(0); i++){
     for(int j = 0; j< array.GetLength(1); j++){
         if(array[i,j] == num){
-            Console.WriteLine($"yes");
+            Console.WriteLine($"Мапкер{num} есть в массиве");
             return true;
         }
     }
    }
-   Console.WriteLine($"No");
+   Console.WriteLine($"Маркер {num} отсутствует в массиве");
    return false;  
 }
