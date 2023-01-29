@@ -1,7 +1,4 @@
-﻿ //int[,] array = GetArray(3, 4, 0, 100);
- //PrintArray(array);
-
-
+﻿
 //--Задача 47. Задайте двумерный массив размером m×n
 //заполненный случайными вещественными числами.
 // double[,] array = GetDoubleArray(3, 4);
@@ -38,12 +35,13 @@ void PrintDoubleArray(double[,] array){
 //PrintArray(array);
 //GetNum(array, num);
 
-//Задача 52. Задайте двумерный массив целых чиселю 
+//Задача 52. Задайте двумерный массив целых чисел 
 //Найдите среднеарифметическое в каждом столбце
 
 int[,] array = GetArray(3, 3, 0, 10);
 PrintArray(array);
 GetSumColumns(array);
+
 
 //---Метод создания целочисленного массива---
 int[,] GetArray(int m, int n, int minValue, int maxValue){
@@ -71,7 +69,7 @@ bool GetNum(int[,] array, int num){
    for(int i = 0; i < array.GetLength(0); i++){
     for(int j = 0; j< array.GetLength(1); j++){
         if(array[i,j] == num){
-            Console.WriteLine($"Мапкер{num} есть в массиве");
+            Console.WriteLine($"Маркер{num} есть в массиве");
             return true;
         }
     }
@@ -82,13 +80,11 @@ bool GetNum(int[,] array, int num){
 
 //---Метод подсчета столбцов---
 void GetSumColumns(int[,] array){
+    double[] newArray = new double[array.GetLength(1)];
     for (int j = 0; j < array.GetLength(1); j++){
-        int sum = 0;
-        double med = 0;
         for (int i = 0; i < array.GetLength(0); i++){
-            sum += array[i,j];
+            newArray[i] += array[j,i];
+            newArray[i] = Math.Round(newArray[i] / 3, 2);
         }
-    }
-    med = Math.Round(sum / 3, 2);
-    Console.WriteLine($"{med}");
+    }Console.Write($"{String.Join(' ', newArray)}");
 }
