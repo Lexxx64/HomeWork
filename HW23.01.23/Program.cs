@@ -40,7 +40,8 @@ void PrintDoubleArray(double[,] array){
 
 int[,] array = GetArray(3, 3, 0, 10);
 PrintArray(array);
-GetSumColumns(array);
+double[] SumColumns = GetSumColumns(array);
+Console.WriteLine($"{String.Join(';', SumColumns)}");
 
 
 //---Метод создания целочисленного массива---
@@ -79,12 +80,14 @@ bool GetNum(int[,] array, int num){
 }
 
 //---Метод подсчета столбцов---
-void GetSumColumns(int[,] array){
+double[] GetSumColumns(int[,] array){
     double[] newArray = new double[array.GetLength(1)];
-    for (int j = 0; j < array.GetLength(1); j++){
-        for (int i = 0; i < array.GetLength(0); i++){
-            newArray[i] += array[j,i];
-            newArray[i] = Math.Round(newArray[i] / 3, 2);
+    for (int i = 0; i < array.GetLength(1); i++){
+        double sum = 0;
+        for (int j = 0; j < array.GetLength(0); j++){
+            sum += array[j,i];
         }
-    }Console.Write($"{String.Join(' ', newArray)}");
+        newArray[i] = Math.Round(sum/array.GetLength(0), 2);
+    }
+    return newArray;
 }
