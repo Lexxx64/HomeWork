@@ -10,10 +10,43 @@
 //---Задача 56: Задайте прямоугольный двумерный массив. 
 //Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
-int[,] Array = GetArray(5, 6, 0, 10);
-PrintArray(Array);
-Console.WriteLine();
-Console.WriteLine($" Строка {GetRowsMin(Array)} с наименьшей суммой");
+// int[,] Array = GetArray(5, 6, 0, 10);
+// PrintArray(Array);
+// Console.WriteLine();
+// Console.WriteLine($" Строка {GetRowsMin(Array)} с наименьшей суммой");
+
+//---Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+Console.WriteLine("Введите количество строк матрицы А: ");
+int rowsA = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите количество столбцов матрицы А: ");
+int columnsA = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите количество строк матрицы B: ");
+int rowsB = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите количество столбцов матрицы B: ");
+int columnsB = int.Parse(Console.ReadLine()!);
+if(rowsA != columnsB){
+    Console.Write($"Такие матрицы нельзя перемножить");
+    return;
+}
+int[,] matrixA = GetArray(rowsA, columnsA, 1, 10);
+int[,] matrixB = GetArray(rowsB, columnsB, 1, 10);
+PrintArray(matrixA);
+Console.WriteLine($"-");
+PrintArray(matrixB);
+Console.WriteLine($"-");
+PrintArray(MultiMatrix(matrixA, matrixB));
+
+//---метод умножения матриц---
+int[,] MultiMatrix(int[,] matrixA, int[,] matrixB){
+    int[,] newMatrix = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
+    for(int i = 0; i < matrixA.GetLength(0); i++){
+        for(int j = 0; j < matrixB.GetLength(1); j++){
+            for(int k = 0; k < matrixA.GetLength(1); k++){
+                newMatrix[i,j] += matrixA[i,k] * matrixB[k,j];
+            }
+        }
+    }return newMatrix;
+}
 
 
 //---метод создание двумерного массива---
